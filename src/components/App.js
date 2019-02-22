@@ -1,11 +1,12 @@
 import React from "react";
-import MyComponent from "./components/MyComponent";
+import SearchBar from "./SearchBar";
+import "./css/App.css";
 
 export default class App extends React.Component {
   render() {
     return (
-      <div className="App">
-        <MyComponent />
+      <div className="container">
+        <SearchBar />
       </div>
     );
   }
