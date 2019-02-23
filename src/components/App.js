@@ -13,14 +13,15 @@ export default class App extends React.Component {
   }
 
   onSearchSubmit = async (query) => {
+
     const response = await unsplash.get('/search/photos', {
       params: {
         query: query
       }
     })
+    console.log(response)
 
     this.setState({ images: response.data.results })
-
     console.log(response.data.results)
   }
 
