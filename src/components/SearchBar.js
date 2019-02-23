@@ -11,14 +11,18 @@ export default class SearchBar extends React.Component {
 
   onInputChange = (event) => {
     this.setState({ query: event.target.value })
-    console.log(this.state.query)
+  }
+
+  onFormSubmit = (event) => {
+    event.preventDefault();
+    this.props.onSearchSubmit(this.state.query)
   }
 
 
   render() {
     return (
-      <div className="search-bar-container">
-        <form>
+      <div className="search-bar-container" onSubmit={this.onFormSubmit}>
+        <form className="ui form">
           <div className="ui massive action input">
             <input type="text" placeholder="Search..." value={this.state.query} onChange={this.onInputChange} />
             <button className="ui button">Search</button>
