@@ -21,8 +21,9 @@ test("renders without crashing", () => {
     shallow(<SearchResults data={data} />);
 });
 
-it("renders a number of ImageItem components, depending on length of props.data", () => {
+test("renders a number of ImageItem components, depending on length of props.data", () => {
 
     const wrapper = shallow(<SearchResults data={data} />);
     expect(wrapper.find('ImageItem').length).toBe(1);
 });
+

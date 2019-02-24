@@ -3,8 +3,6 @@ import ImageItem from './ImageItem';
 
 const SearchResults = (props) => {
     const images = props.data
-    console.log(images)
-
     const searchResults = images.map(image => {
         return (
             <ImageItem
