@@ -11,10 +11,10 @@ const ImageItem = (props) => {
                 <div className="content">
                     <span className="right floated">
                         <i className="heart outline like icon"></i>
-                        {props.likes} likes
+                        {props.likes}
                     </span>
                 </div>
-                <div className="content">
+                <div className="content download-link">
                     <a href={props.downloadLink} target="_blank" rel="noopener noreferrer" data-test="download-url">Download image</a>
                 </div>
             </div>

@@ -16,7 +16,11 @@ const SearchResults = (props) => {
             />
         );
     });
-    return (<div className="search-results">{searchResults}</div>)
+    return (
+        <div className="search-results-container">
+            <div className="results-number">{props.resultsNumber}</div>
+            <div className="search-results">{searchResults}</div>
+        </div>)
 }
 
 export default SearchResults;

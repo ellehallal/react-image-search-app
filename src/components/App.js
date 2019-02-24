@@ -37,7 +37,7 @@ export default class App extends React.Component {
       )
     }
     return (
-      `Found ${this.state.resultsNumber} image(s)`
+      `Displaying ${this.state.resultsNumber} image(s):`
     )
   }
 
@@ -46,19 +46,16 @@ export default class App extends React.Component {
     return (
       <div className="container">
         <div>
-          <h1 className="ui huge center aligned header">
-            Image Search
+          <h1>
+            Imagy
           </h1>
+          <p className="tagline">Search for an image below:</p>
         </div>
 
         <SearchBar onSearchSubmit={this.onSearchSubmit} />
 
-        <div data-test="results-number">
-          {this.displayNumberOfResults()}
-        </div>
-
         <div className="results-container">
-          <SearchResults data={this.state.images} />
+          <SearchResults data={this.state.images} resultsNumber={this.displayNumberOfResults()} />
         </div>
       </div>
     );

@@ -18,12 +18,18 @@ const data = [{
 }]
 
 test("renders without crashing", () => {
-    shallow(<SearchResults data={data} />);
+    shallow(<SearchResults data={data} resultsNumber="10 results" />);
 });
 
 test("renders a number of ImageItem components, depending on length of props.data", () => {
 
-    const wrapper = shallow(<SearchResults data={data} />);
+    const wrapper = shallow(<SearchResults data={data} resultsNumber="10 results" />);
     expect(wrapper.find('ImageItem').length).toBe(1);
+});
+
+test("displays number of images displayed, depending on props.resultsNumber", () => {
+
+    const wrapper = shallow(<SearchResults data={data} resultsNumber="Found 10 results" />);
+    expect(wrapper.text()).toContain('10 results');
 });
 
