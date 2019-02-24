@@ -1,3 +1,4 @@
 .image-item {
-    margin: 0.5%;
+    margin: 0 0 2em;
+    display: inline-block;
 }

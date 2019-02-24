@@ -5,4 +5,5 @@ export default axios.create({
     headers: {
         Authorization: 'Client-ID ' + process.env.REACT_APP_ACCESS_KEY
     }
+
 })

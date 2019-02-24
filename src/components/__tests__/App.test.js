@@ -31,7 +31,8 @@ it("fetches data from unsplash", async () => {
   expect(unsplash.get).toHaveBeenCalledTimes(1);
   expect(unsplash.get).toHaveBeenCalledWith('/search/photos', {
     params: {
-      query: "cats"
+      query: "cats",
+      per_page: 30,
     }
   });
 });
