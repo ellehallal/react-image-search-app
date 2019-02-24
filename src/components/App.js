@@ -1,6 +1,7 @@
 import React from "react";
 import unsplash from "../api/unsplash"
 import SearchBar from "./SearchBar";
+import SearchResults from "./SearchResults";
 import "./css/App.css";
 
 
@@ -19,12 +20,9 @@ export default class App extends React.Component {
         query: query
       }
     })
-    console.log(response)
-
     this.setState({ images: response.data.results })
     console.log(response.data.results)
   }
-
 
 
   render() {
@@ -32,6 +30,10 @@ export default class App extends React.Component {
       <div className="container">
         <SearchBar onSearchSubmit={this.onSearchSubmit} />
         Found {this.state.images.length} images
+
+        <div className="results-container">
+          <SearchResults data={this.state.images} />
+        </div>
       </div>
     );
   }

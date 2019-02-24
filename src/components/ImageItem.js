@@ -8,7 +8,7 @@ const ImageItem = (props) => {
                     {props.description}
                 </div>
                 <div className="image">
-                    <img alt={props.description} src={props.imageurl} data-test="image" />
+                    <img alt={props.description} src={props.imageUrl} data-test="image" />
                 </div>
                 <div className="content">
                     <span className="right floated">

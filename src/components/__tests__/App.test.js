@@ -23,3 +23,4 @@ it("fetches data from unsplash", async () => {
     }
   });
 });
+
