@@ -45,7 +45,7 @@ test("renders an instance of SearchBar component", () => {
   expect(searchBar.length).toEqual(1);
 });
 
-test("renders an instance of SearchResultscomponent", () => {
+test("renders an instance of SearchResults component", () => {
 
   const wrapper = shallow(<App />);
   wrapper.setState({ images: data })

@@ -1,5 +1,6 @@
 import React from 'react';
 import ImageItem from './ImageItem';
+import "./css/SearchResults.css";
 
 const SearchResults = (props) => {
     const images = props.data
@@ -15,7 +16,7 @@ const SearchResults = (props) => {
             />
         );
     });
-    return (<div>{searchResults}</div>)
+    return (<div className="search-results">{searchResults}</div>)
 }
 
 export default SearchResults;
