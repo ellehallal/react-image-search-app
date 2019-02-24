@@ -55,3 +55,12 @@ test("renders an instance of SearchResults component", () => {
   expect(searchResults.length).toEqual(1);
 });
 
+test("renders an instance of ScrollUpButton component", () => {
+
+  const wrapper = shallow(<App />);
+  wrapper.setState({ images: data })
+  wrapper.update()
+  const scrollUpButton = wrapper.find('ScrollUpButton')
+  expect(scrollUpButton.length).toEqual(1);
+});
+

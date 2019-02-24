@@ -1,4 +1,5 @@
 import React from "react";
+import ScrollUpButton from "react-scroll-up-button";
 import unsplash from "../api/unsplash"
 import SearchBar from "./SearchBar";
 import SearchResults from "./SearchResults";
@@ -56,6 +57,10 @@ export default class App extends React.Component {
 
         <div className="results-container">
           <SearchResults data={this.state.images} resultsNumber={this.displayNumberOfResults()} />
+        </div>
+
+        <div>
+          <ScrollUpButton />
         </div>
       </div>
     );
